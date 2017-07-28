@@ -1,22 +1,29 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-float conversion(float x);
+#define BUFFERSIZE 50
+
+float convCelToFahr(float x);
+float convArrayToFloat(char y[]);
 
 int main() {
-    float numToConvert;
-    float firstNum;
-    float result;
+    char buf[BUFFERSIZE];
     
     printf("Enter your celsius temperature here: \n");
-    while((firstNum=getchar()) != '\n'){
-        numToConvert = firstNum - '0';
+    while(fgets(buf, BUFFERSIZE, stdin) != NULL){
+        printf("%.2f", convCelToFahr(convArrayToFloat(buf)));
     }
     
-    result = conversion(numToConvert);
-    printf("%f", result);
     return 0;
 }
 
-float conversion(float cel){
+float convCelToFahr(float cel){
     return ((cel*(9.0/5.0))+32.0);
+}
+
+float convArrayToFloat(char numArray[]){
+    float numFloat;
+    numFloat = (float)atof(numArray);
+    printf("%.2f \n", numFloat);
+    return numFloat;
 }
