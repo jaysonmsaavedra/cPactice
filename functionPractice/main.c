@@ -11,7 +11,7 @@ int main() {
     
     printf("Enter your celsius temperature here: \n");
     while(fgets(buf, BUFFERSIZE, stdin) != NULL){
-        printf("%.2f", convCelToFahr(convArrayToFloat(buf)));
+        printf("%.2f \n", convCelToFahr(convArrayToFloat(buf)));
     }
     
     return 0;

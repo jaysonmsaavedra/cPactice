@@ -6,7 +6,7 @@
 ProjectName            :=functionPractice
 ConfigurationName      :=Debug
 WorkspacePath          :=P:/otherStuff/repo/cBookPractice
-ProjectPath            :=P:/otherStuff/repo/cBookPractice/functions17/functionPractice
+ProjectPath            :=P:/otherStuff/repo/cBookPractice/functionPractice
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
@@ -94,7 +94,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.c$(ObjectSuffix): main.c $(IntermediateDirectory)/main.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "P:/otherStuff/repo/cBookPractice/functions17/functionPractice/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "P:/otherStuff/repo/cBookPractice/functionPractice/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.c$(DependSuffix): main.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.c$(ObjectSuffix) -MF$(IntermediateDirectory)/main.c$(DependSuffix) -MM main.c
 
